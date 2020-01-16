@@ -11,6 +11,7 @@ class ButtonBarComponent extends Component {
     this.props.onButtonClick(event.target.value)
   }
 
+
   render() {
     return (
       <div className="button-bar col-md-8 pull-left">
@@ -21,7 +22,7 @@ class ButtonBarComponent extends Component {
             </button>
           );
         })}
-        <button className="button clear" >clear</button>
+        <button className="button clear" onClick={this.props.onClearClick} >clear</button>
       </div>
     );
   }
